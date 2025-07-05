@@ -23,6 +23,26 @@ Apache Spark is an open-source distributed data processing engine designed for b
 
 ## Spark and Hadoop
 
+Spark can use Hadoop in two ways — one is storage and the second is processing. Since Spark has its own cluster management computation, it uses Hadoop for storage purposes only.
+
+Hadoop is a Big Data ecosystem composed of several components:
+
+- HDFS (Hadoop Distributed File System) → a distributed file system
+
+- YARN (Yet Another Resource Negotiator) → a resource manager for executing tasks across a cluster
+
+- MapReduce → the original batch processing engine (now gradually replaced by Spark)
+
+Spark was created to replace MapReduce by being:
+
+- faster (thanks to in-memory processing)
+
+- more flexible (supports streaming, SQL, machine learning, etc.)
+
+Spark is not a full replacement for Hadoop, but rather a modern processing engine that can integrate with Hadoop.Hadoop is still useful for storage (via HDFS) and resource management (via YARN)
+
+Spark replaces MapReduce, but does not replace the entire Hadoop ecosystem
+
 ## Spark Architecture
 
 Spark consists of several key components:
