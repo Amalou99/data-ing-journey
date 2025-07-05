@@ -1,18 +1,27 @@
 # 🚀 Apache Spark - Complete Presentation
 
-## 💡 What is Apache Spark?
+## Table of Contents
 
-Apache Spark is an open-source distributed data processing engine designed for big data workloads.  
-It enables fast computation through **in-memory execution** and supports a variety of workloads, including:
+- [What is Apache Spark](#what-is-apache-spark)
+- [Spark and Hadoop](#spark-and-hadoop)
+- [Spark Architecture](#spark-rchitecture)
+  - [Introduction](#introduction)
+  - [Features of Apache Spark](#features-of-apache-spark)
+  - [Key concepts in Spark]("key-concepts-in-spark)
+- [Execution mode](#execution-mode)
+
+## What is Apache Spark
+
+Apache Spark is an open-source distributed data processing engine designed for big data workloads. Knowns for speed and efficiency thanks to its **in-memory execution** capabilities and optimized data processing techniques.It supports a variety of workloads, including:
 
 - Batch processing
 - Streaming
 - Machine learning
 - Graph processing
 
----
+## Spark and Hadoop
 
-## 🧱 Architecture
+## Spark Architecture
 
 Spark consists of several key components:
 
@@ -21,8 +30,6 @@ Spark consists of several key components:
 - **Cluster Manager**: manages resources (YARN, Kubernetes, or Standalone)
 - **DAG Scheduler**: builds an optimized Directed Acyclic Graph of stages and tasks
 
----
-
 ## 🔗 Integration with Hadoop
 
 Spark does **not require Hadoop**, but can integrate with it:
@@ -30,8 +37,6 @@ Spark does **not require Hadoop**, but can integrate with it:
 - **HDFS**: Spark can read/write data stored in Hadoop Distributed File System
 - **YARN**: Spark can run on Hadoop YARN to manage cluster resources
 - Spark often **replaces Hadoop MapReduce** as a faster, in-memory processing alternative
-
----
 
 ## 🧠 Core Components
 
