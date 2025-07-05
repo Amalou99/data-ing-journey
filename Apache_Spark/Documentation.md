@@ -19,6 +19,8 @@ Apache Spark is an open-source distributed data processing engine designed for b
 - Machine learning
 - Graph processing
 
+![Alt text](./spark_Presentation.jpg "Spark")
+
 ## Spark and Hadoop
 
 ## Spark Architecture
