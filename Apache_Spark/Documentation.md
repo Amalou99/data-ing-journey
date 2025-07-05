@@ -21,6 +21,12 @@ Apache Spark is an open-source distributed data processing engine designed for b
 
 ![Alt text](./spark_Presentation.jpg "Spark")
 
+- Apache Spark Core : It provides distributed task distribution, scheduling, and basic read/write functionalities.
+- Spark SQL: Spark SQL is a module in Spark that provides a programming interface for querying structured and semi-structured data using SQL, HiveQL, or DataFrame APIs.
+- Spark Streaming: Spark Streaming enables processing and analyzing real-time streaming data. It ingests data in mini-batches and performs parallel processing on the live data stream.
+- MLlib (librairie Machine Learning): is Spark’s scalable machine learning library.
+- GraphX: is a graph processing library that provides an API for graph computation and analysis.
+
 ## Spark and Hadoop
 
 Spark can use Hadoop in two ways — one is storage and the second is processing. Since Spark has its own cluster management computation, it uses Hadoop for storage purposes only.
@@ -39,9 +45,7 @@ Spark was created to replace MapReduce by being:
 
 - more flexible (supports streaming, SQL, machine learning, etc.)
 
-Spark is not a full replacement for Hadoop, but rather a modern processing engine that can integrate with Hadoop.Hadoop is still useful for storage (via HDFS) and resource management (via YARN)
-
-Spark replaces MapReduce, but does not replace the entire Hadoop ecosystem
+Spark is not a full replacement for Hadoop, but rather a modern processing engine that can integrate with Hadoop.Hadoop is still useful for storage (via HDFS) and resource management (via YARN).Spark replaces MapReduce, but does not replace the entire Hadoop ecosystem
 
 ## Spark Architecture
 
