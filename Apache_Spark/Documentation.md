@@ -8,6 +8,10 @@
   - [Introduction](#introduction)
   - [Features of Apache Spark](#features-of-apache-spark)
   - [Key concepts in Spark]("key-concepts-in-spark)
+- [Available APIs](#available-apis)
+  - [RDD](#rdd)
+  - [DataFrame](#dataframe)
+  - [DataSet](#dataset)
 - [Execution mode](#execution-mode)
 
 ## What is Apache Spark
@@ -26,6 +30,13 @@ Apache Spark is an open-source distributed data processing engine designed for b
 - Spark Streaming: Spark Streaming enables processing and analyzing real-time streaming data. It ingests data in mini-batches and performs parallel processing on the live data stream.
 - MLlib (librairie Machine Learning): is Spark’s scalable machine learning library.
 - GraphX: is a graph processing library that provides an API for graph computation and analysis.
+
+Advantages of Spark
+
+• In-Memory Processing(speed): Spark leverages in-memory computing to store and process data in memory, resulting in significantly faster data processing compared to disk-based systems like Hadoop MapReduce. By minimizing disk I/O.
+• Distributed Computing: Spark distributes data and computation across multiple nodes in a cluster, enabling parallel processing and efficient resource utilization. It automatically manages task scheduling, data partitioning, and fault tolerance, ensuring scalability and high availability.
+• Broad Language Support: supports multiple programming languages, including Scala, Java, Python, and R.
+• Integration with Big Data Ecosystem: Spark integrates well with various data storage systems and technologies, including Hadoop Distributed File System (HDFS), HBase, Cassandra, and Amazon S3. It can read and write data from different sources
 
 ## Spark and Hadoop
 
@@ -47,6 +58,12 @@ Spark was created to replace MapReduce by being:
 
 Spark is not a full replacement for Hadoop, but rather a modern processing engine that can integrate with Hadoop.Hadoop is still useful for storage (via HDFS) and resource management (via YARN).Spark replaces MapReduce, but does not replace the entire Hadoop ecosystem
 
+Spark does **not require Hadoop**, but can integrate with it:
+
+- **HDFS**: Spark can read/write data stored in Hadoop Distributed File System
+- **YARN**: Spark can run on Hadoop YARN to manage cluster resources
+- Spark often **replaces Hadoop MapReduce** as a faster, in-memory processing alternative
+
 ## Spark Architecture
 
 ![Alt text](./spark_architecture.jpg "Spark Architecure")
@@ -64,27 +81,11 @@ Spark consists of several key components:
 - **Cluster Manager**: manages resources (YARN, Kubernetes, or Standalone)
 - **DAG Scheduler**: builds an optimized Directed Acyclic Graph of stages and tasks
 
-## 🔗 Integration with Hadoop
+## Available APIs
 
-Spark does **not require Hadoop**, but can integrate with it:
+### RDD
 
-- **HDFS**: Spark can read/write data stored in Hadoop Distributed File System
-- **YARN**: Spark can run on Hadoop YARN to manage cluster resources
-- Spark often **replaces Hadoop MapReduce** as a faster, in-memory processing alternative
-
-## 🧠 Core Components
-
-- **Spark Core**: the base execution engine
-- **Spark SQL**: for querying structured data using SQL or DataFrame API
-- **Spark Streaming**: for real-time processing
-- **MLlib**: for distributed machine learning
-- **GraphX**: for graph processing and graph algorithms
-
----
-
-## 🔄 Available APIs
-
-### RDD (Resilient Distributed Dataset)
+Resilient Distributed Dataset :
 
 - Low-level abstraction
 - Immutable collections of distributed objects
@@ -101,14 +102,11 @@ Spark does **not require Hadoop**, but can integrate with it:
 - Strongly-typed version of DataFrame (Scala/Java only)
 - Combines benefits of RDD (type-safety) and DataFrame (performance)
 
----
+## Execution mode
 
-## ⚡ Advantages of Spark
-
-- **In-memory computation** leads to high speed
-- Unified ecosystem: batch, streaming, SQL, ML, graph
-- Scalable across clusters with thousands of nodes
-- Integrates with many data sources: HDFS, S3, Hive, Cassandra, JDBC, etc.
+1. Cluster mode: In cluster mode, a user submits a pre-compiled JAR, Python script, or R script to a cluster manager. The cluster manager then launches the driver process on a worker node inside the cluster, in addition to the executor processes. This means that the cluster manager is responsible for maintaining all Spark Application–related processes.
+2. Client mode: is nearly the same as cluster mode except that the Spark driver remains on the client machine that submitted the application. This means that the client machine is responsible for maintaining the Spark driver process, and the cluster manager maintains the executor processes.
+3. Local Mode: it runs the entire Spark Application on a single machine. It achieves parallelism through threads on that single machine.
 
 ---
 
