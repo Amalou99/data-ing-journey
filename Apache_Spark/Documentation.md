@@ -49,6 +49,14 @@ Spark is not a full replacement for Hadoop, but rather a modern processing engin
 
 ## Spark Architecture
 
+![Alt text](./spark_architecture.jpg "Spark Architecure")
+
+1. The Spark driver: is the program or process responsible for coordinating the execution of the Spark application. It runs the main function and creates the SparkContext, which connects to the cluster manager.
+2. The Spark executors: are worker processes responsible for executing tasks in Spark applications. Executors run tasks concurrently and store data in memory or disk for caching and intermediate storage.
+3. The cluster manager: is responsible for allocating resources and managing the cluster on which the Spark application runs. Spark supports various cluster managers like Apache Mesos, Hadoop YARN, and standalone cluster manager.
+4. sparkContext: is the entry point for any Spark functionality. It represents the connection to a Spark cluster and can be used to create RDDs (Resilient Distributed Datasets), accumulators, and broadcast variables. SparkContext also coordinates the execution of tasks.
+5. Task: A task is the smallest unit of work in Spark.
+
 Spark consists of several key components:
 
 - **Driver**: orchestrates execution, transforms code into tasks
